@@ -3,7 +3,7 @@
  * Author:LinJ
  * Date:2021-10-15 14:34:10
  * LastEditors:LinJ
- * LastEditTime:2021-10-15 15:20:08
+ * LastEditTime:2021-10-22 13:58:22
  */
 /**
  * 求斐波那契数列中的奇数之和
@@ -20,6 +20,7 @@ function sumFibs(num) {
   // 先求出斐波那契数列
   while(current <= num){
     fibsArr.push(current);
+    // 截取最后两个数
     let lastTwo = fibsArr.slice(-2);
     current = lastTwo[0] + lastTwo[1];
   }

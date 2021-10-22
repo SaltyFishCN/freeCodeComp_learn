@@ -3,14 +3,17 @@
  * Author:LinJ
  * Date:2021-10-16 20:55:33
  * LastEditors:LinJ
- * LastEditTime:2021-10-16 21:24:30
+ * LastEditTime:2021-10-23 00:06:49
  */
 /**
  * 把传入的数字转为罗马数字。
  * 转换后的罗马数字字母必须都是大写
  * https://www.mathsisfun.com/roman-numerals.html
  */
-
+/**
+ * 从高位开始处理，一步步减少。
+ * 其中逢1 4 5 9 比较特殊所以映射表中单独列出
+ */
 function convertToRoman(num) {
 	const num_roman_map = [
 		[1, "I"],

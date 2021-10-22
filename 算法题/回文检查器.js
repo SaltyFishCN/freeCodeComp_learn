@@ -3,7 +3,7 @@
  * Author:LinJ
  * Date:2021-10-16 18:38:05
  * LastEditors:LinJ
- * LastEditTime:2021-10-16 20:55:21
+ * LastEditTime:2021-10-22 23:59:24
  */
 /**
  * 如果传入的字符串是回文字符串，则返回 true。 否则返回 false
@@ -15,6 +15,7 @@
 
  function palindrome(str) {
   let replace_str = str.replace(/[_\W]/g,'').toLowerCase();
+  // 转换成数组进行翻转再合并为字符串
   return ( replace_str === replace_str.split('').reverse().join(''))
  }
 

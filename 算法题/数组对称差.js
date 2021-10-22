@@ -3,11 +3,11 @@
  * Author:LinJ
  * Date:2021-10-13 11:58:07
  * LastEditors:LinJ
- * LastEditTime:2021-10-13 12:04:54
+ * LastEditTime:2021-10-23 00:21:26
  */
 
 function diffArray(arr1, arr2) {
-  return arr1.concat(arr2)
+  return arr1.concat(arr2)  // [...arr1,...arr2]
   // 滤掉arr1与arr2中都存在的元素
   .filter(item => !(arr1.includes(item) && arr2.includes(item)))
   // 去重

@@ -4,12 +4,12 @@
  * Author:LinJ
  * Date:2021-10-13 12:20:05
  * LastEditors:LinJ
- * LastEditTime:2021-10-15 11:18:35
+ * LastEditTime:2021-10-23 00:24:50
  */
 function whatIsInAName(collection, source) {
 
   return collection.filter(item=>{
-    // Object.keys(source).every(fn) 测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值
+    // Object.keys(source)提取key值形成数组，array.prototype.every(fn) 测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值
     // 该布尔值刚好提供给filter作为过滤标准
     return Object.keys(source).every(key=>item[key] === source[key])
   })

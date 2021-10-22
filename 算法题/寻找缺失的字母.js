@@ -3,7 +3,7 @@
  * Author:LinJ
  * Date:2021-10-15 13:59:47
  * LastEditors:LinJ
- * LastEditTime:2021-10-15 14:03:22
+ * LastEditTime:2021-10-23 00:26:57
  */
 /**
  * 寻找缺失的字母
@@ -14,8 +14,8 @@
  function fearNotLetter(str) {
   const start = str.charCodeAt(0)
   const end = str.charCodeAt(str.length - 1);
-  // 生成完整的字母序列
-  let charArr = Array.from({length:end-start + 1},(_,i)=>String.fromCharCode(start + i));
+  // 利用Array.from()生成完整的字母序列
+  let charArr = Array.from({length:end-start + 1},(_,step)=>String.fromCharCode(start + step));
   // 过滤
   return charArr.filter(item=>!str.includes(item))[0]
 }

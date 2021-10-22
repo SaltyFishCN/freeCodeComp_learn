@@ -3,7 +3,7 @@
  * Author:LinJ
  * Date:2021-10-15 16:25:34
  * LastEditors:LinJ
- * LastEditTime:2021-10-15 19:12:29
+ * LastEditTime:2021-10-23 00:33:29
  */
 /**
  * 找到给定参数的最小公倍数，可以被这两个参数整除，也可以被指定范围内的所以整数整除。
@@ -20,8 +20,9 @@ function smallestCommons(arr) {
   let result = 1;
   // 获取最大公因数
   // 辗转相除法：两个整数的最大公约数等于其中较小的数和两数相除余数的最大公约数
+  // 反复进行大小相除，知道余数为0
   function getGCD(sm, lg) {
-    [sm,lg] = sm > lg?[lg,sm]:[sm,lg];
+    [sm,lg] = sm > lg ? [lg,sm]:[sm,lg];
     while (sm !== 0)  [sm, lg] = [lg % sm, sm];
     return lg;
   }

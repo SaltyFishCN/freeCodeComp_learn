@@ -4,7 +4,7 @@
  * Author:LinJ
  * Date:2021-10-13 12:17:42
  * LastEditors:LinJ
- * LastEditTime:2021-10-13 22:14:22
+ * LastEditTime:2021-10-22 23:58:26
  */
 function destroyer(arr,...args) {
   let temp = arr;
@@ -16,6 +16,7 @@ function destroyer(arr,...args) {
 
 function destroyer(arr,...args) {
   return args.reduce((prev,next)=>{
+      // 逐步过滤arr，返回每次过滤的结果
       return prev.filter(item=>item !== next)
   },arr)
 }

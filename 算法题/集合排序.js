@@ -3,7 +3,7 @@
  * Author:LinJ
  * Date:2021-10-15 14:05:44
  * LastEditors:LinJ
- * LastEditTime:2021-10-15 14:25:15
+ * LastEditTime:2021-10-23 00:01:33
  */
 /**
  * 集合排序
@@ -26,7 +26,7 @@ function uniteUnique(arr) {
 
 function uniteUnique(arr) {
   return [].slice.call(arguments).reduce((accumulator,currentValue)=>{
-    accumulator.concat(currentValue.fliter(item=>accumulator.indexOf(item)===-1))
+    return accumulator.concat(currentValue.fliter(item=>accumulator.indexOf(item)===-1))
   },[])
 }
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) // [1, 3, 2, 5, 4]
